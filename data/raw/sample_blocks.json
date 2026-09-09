@@ -1,0 +1,269 @@
+[
+  {
+    "hash": "000000000000000000000000000000000",
+    "height": 900000,
+    "timestamp": 1735000000,
+    "transaction_count": 4,
+    "transactions": [
+      {
+        "hash": "tx0000000001",
+        "is_coinbase": true,
+        "input_count": 0,
+        "output_count": 1,
+        "inputs": [],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000002fakeaddr"
+            ],
+            "value": 398117895
+          }
+        ]
+      },
+      {
+        "hash": "tx0000000002",
+        "is_coinbase": false,
+        "input_count": 2,
+        "output_count": 1,
+        "inputs": [
+          {
+            "index": 0,
+            "spent_transaction_hash": "tx0000000001",
+            "spent_output_index": 0,
+            "addresses": [
+              "bc1q00000030fakeaddr"
+            ],
+            "value": 55027676
+          },
+          {
+            "index": 1,
+            "spent_transaction_hash": "tx0000000001",
+            "spent_output_index": 2,
+            "addresses": [
+              "bc1q0000001cfakeaddr"
+            ],
+            "value": 17064198
+          }
+        ],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000002fakeaddr"
+            ],
+            "value": 50303251
+          }
+        ]
+      },
+      {
+        "hash": "tx0000000003",
+        "is_coinbase": false,
+        "input_count": 1,
+        "output_count": 1,
+        "inputs": [
+          {
+            "index": 0,
+            "spent_transaction_hash": "tx0000000001",
+            "spent_output_index": 2,
+            "addresses": [
+              "bc1q0000000dfakeaddr"
+            ],
+            "value": 384411102
+          }
+        ],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q0000002afakeaddr"
+            ],
+            "value": 376521977
+          }
+        ]
+      },
+      {
+        "hash": "tx0000000004",
+        "is_coinbase": false,
+        "input_count": 2,
+        "output_count": 1,
+        "inputs": [
+          {
+            "index": 0,
+            "spent_transaction_hash": "tx0000000002",
+            "spent_output_index": 2,
+            "addresses": [
+              "bc1q00000012fakeaddr"
+            ],
+            "value": 434560665
+          },
+          {
+            "index": 1,
+            "spent_transaction_hash": "tx0000000001",
+            "spent_output_index": 0,
+            "addresses": [
+              "bc1q0000002dfakeaddr"
+            ],
+            "value": 226890378
+          }
+        ],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000016fakeaddr"
+            ],
+            "value": 149182041
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "000000000000000000000000000000001",
+    "height": 900001,
+    "timestamp": 1735000600,
+    "transaction_count": 2,
+    "transactions": [
+      {
+        "hash": "tx0000000005",
+        "is_coinbase": true,
+        "input_count": 0,
+        "output_count": 1,
+        "inputs": [],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000031fakeaddr"
+            ],
+            "value": 180708823
+          }
+        ]
+      },
+      {
+        "hash": "tx0000000006",
+        "is_coinbase": false,
+        "input_count": 1,
+        "output_count": 1,
+        "inputs": [
+          {
+            "index": 0,
+            "spent_transaction_hash": "tx0000000004",
+            "spent_output_index": 0,
+            "addresses": [
+              "bc1q00000017fakeaddr"
+            ],
+            "value": 454996074
+          }
+        ],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000017fakeaddr"
+            ],
+            "value": 324123944
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hash": "000000000000000000000000000000002",
+    "height": 900002,
+    "timestamp": 1735001200,
+    "transaction_count": 3,
+    "transactions": [
+      {
+        "hash": "tx0000000007",
+        "is_coinbase": true,
+        "input_count": 0,
+        "output_count": 1,
+        "inputs": [],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q0000002ffakeaddr"
+            ],
+            "value": 246652852
+          }
+        ]
+      },
+      {
+        "hash": "tx0000000008",
+        "is_coinbase": false,
+        "input_count": 1,
+        "output_count": 2,
+        "inputs": [
+          {
+            "index": 0,
+            "spent_transaction_hash": "tx0000000001",
+            "spent_output_index": 2,
+            "addresses": [
+              "bc1q00000013fakeaddr"
+            ],
+            "value": 445284238
+          }
+        ],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000029fakeaddr"
+            ],
+            "value": 332066263
+          },
+          {
+            "index": 1,
+            "addresses": [
+              "bc1q00000018fakeaddr"
+            ],
+            "value": 309964575
+          }
+        ]
+      },
+      {
+        "hash": "tx0000000009",
+        "is_coinbase": false,
+        "input_count": 1,
+        "output_count": 3,
+        "inputs": [
+          {
+            "index": 0,
+            "spent_transaction_hash": "tx0000000002",
+            "spent_output_index": 0,
+            "addresses": [
+              "bc1q0000002bfakeaddr"
+            ],
+            "value": 122352953
+          }
+        ],
+        "outputs": [
+          {
+            "index": 0,
+            "addresses": [
+              "bc1q00000032fakeaddr"
+            ],
+            "value": 155364977
+          },
+          {
+            "index": 1,
+            "addresses": [
+              "bc1q00000006fakeaddr"
+            ],
+            "value": 459196204
+          },
+          {
+            "index": 2,
+            "addresses": [
+              "bc1q0000000ffakeaddr"
+            ],
+            "value": 465190878
+          }
+        ]
+      }
+    ]
+  }
+]
