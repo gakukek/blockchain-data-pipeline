@@ -25,7 +25,9 @@ def load_tables(tables: dict[str, pd.DataFrame], db_path: Path = DB_PATH) -> Non
 if __name__ == "__main__":
     from extract.fetch import get_raw_blocks
     from transform.flatten import flatten_blocks
+    from transform.validate import validate_tables
 
     tables = flatten_blocks(get_raw_blocks())
+    validate_tables(tables)
     load_tables(tables)
     print(f"Loaded {list(tables.keys())} into {DB_PATH}")

@@ -10,6 +10,7 @@ import duckdb
 from extract.fetch import get_raw_blocks
 from load.warehouse import DB_PATH, load_tables
 from transform.flatten import flatten_blocks
+from transform.validate import validate_tables
 
 
 def main():
@@ -22,6 +23,9 @@ def main():
     tables = flatten_blocks(raw_blocks)
     for name, df in tables.items():
         print(f"    -> {name}: {len(df)} rows")
+
+    print("    validating flattened tables...")
+    validate_tables(tables)
 
     print("3/3 load: writing to local DuckDB warehouse...")
     load_tables(tables)
