@@ -1,4 +1,3 @@
-from transform.flatten import flatten_blocks
 import pandas as pd
 
 def validate_tables(tables: dict[str, pd.DataFrame]) -> None:

@@ -11,25 +11,36 @@ logic is proven. All tools below are free at this scale.
   schema, and ran the full loop into a local DuckDB file. Goal was just
   to prove the *shape* of the pipeline works, no real data yet.
 
-- [ ] **Day 2 — Swap in real data**
-  Set up a free GCP project (BigQuery sandbox mode needs no credit card).
-  Replace `extract/fetch.py`'s body with a real query against
-  `bigquery-public-data.crypto_bitcoin.blocks`/`transactions`, scoped to
-  ONE day of blocks with a hard `LIMIT` (the real tables are huge — always
-  filter by date, never `SELECT *` unbounded). transform.py and load.py
-  should need zero changes if the raw shape matches.
+- [x] **Day 2 — Swap in real data**
+  Setting up a GCP billing account for the BigQuery public Bitcoin dataset
+  kept failing, so the real-data source is the free mempool.space REST API
+  instead. `extract/fetch.py` pulls a small batch of recent blocks (10) and
+  each block's transactions, normalizes them into the same
+  blocks → transactions → inputs/outputs shape as the synthetic sample, and
+  caches the raw blocks in `data/raw/mempool_cache.json` so reruns don't
+  hit the API.
 
-- [ ] **Day 3 — Harden the transform logic**
-  Real data will break the synthetic assumptions: coinbase transactions
-  with no inputs, transactions with multiple addresses per output,
-  missing/null address arrays. Add a few `assert`/test cases in
-  `transform/flatten.py` for these edge cases.
+- [x] **Day 3 — Harden the transform logic**
+  Real data has coinbase transactions with no real inputs and outputs with
+  no address; `transform/flatten.py` stores a missing address as NULL.
+  Added `transform/validate.py` with `validate_tables()`: null checks on key
+  columns, duplicate checks on primary keys, and foreign-key checks
+  (transactions → blocks, inputs/outputs → transactions). It runs in
+  `run_pipeline.py` between transform and load and raises one error listing
+  every failed check.
 
-- [ ] **Day 4 — Warehouse + real questions**
-  Add a couple more SQL queries against the DuckDB tables: transaction
-  volume per day, miner revenue trend, most active addresses. This is the
-  "daily_blocks_transactions" / "daily_miner_metrics" logic from the
-  reference repo's dbt models, written as plain SQL first.
+- [x] **Day 4 — Warehouse + real questions**
+  Added `analytics/query.py`, which opens the DuckDB warehouse read-only and
+  runs every `.sql` file in `analytics/sql/`, printing each result:
+  - `daily_blocks_transactions.sql` — blocks and transactions per day
+  - `daily_miner_metrics.sql` — miner revenue (coinbase outputs) per block
+  - `address_activity.sql` — most active addresses across inputs and outputs
+
+  Run with `python -m analytics.query`. Note: the `transactions` table only
+  holds a sample per block (25), so transaction *volume* comes from
+  `blocks.transaction_count`, not from counting rows in `transactions`.
+  This is the "daily_blocks_transactions" / "daily_miner_metrics" logic from
+  the reference repo's dbt models, written as plain SQL first.
 
 - [ ] **Day 5 — Add dbt-core**
   Install `dbt-duckdb` locally (dbt Cloud not required). Turn the Day 4
