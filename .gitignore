@@ -3,3 +3,4 @@ __pycache__/
 data/warehouse/*.duckdb
 
 project_snapshot.*
+PLAN.md

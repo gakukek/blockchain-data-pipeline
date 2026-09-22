@@ -42,10 +42,17 @@ logic is proven. All tools below are free at this scale.
   This is the "daily_blocks_transactions" / "daily_miner_metrics" logic from
   the reference repo's dbt models, written as plain SQL first.
 
-- [ ] **Day 5 — Add dbt-core**
-  Install `dbt-duckdb` locally (dbt Cloud not required). Turn the Day 4
-  queries into dbt models: `stg_blocks`, `stg_transactions`, then a mart
-  model like `daily_blocks_transactions`.
+- [x] **Day 5 — Add dbt-core**
+  Installed `dbt-core` + `dbt-duckdb` locally, project lives in `dbt/`
+  (`dbt_project.yml`, `profiles.yml` pointing at the existing
+  `data/warehouse/bitcoin.duckdb`). `dbt/models/staging/_sources.yml`
+  declares the `blocks`/`transactions`/`inputs`/`outputs` tables that
+  `run_pipeline.py` already writes as dbt sources (dbt doesn't build
+  them — the python pipeline still has to run first). Added
+  `stg_blocks.sql` and `stg_transactions.sql` as thin views, and a mart
+  model `daily_blocks_transactions.sql` that reproduces the Day 4 query
+  on top of `stg_blocks`. Run with:
+  `python run_pipeline.py && dbt run --project-dir dbt --profiles-dir dbt`.
 
 - [ ] **Day 6 — One more mart model + basic dbt tests**
   Add `daily_miner_metrics` or `address_activity`. Add `not_null`/`unique`

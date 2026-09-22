@@ -1,0 +1,7 @@
+bitcoin_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'C:/Users/darry/Documents/ARCHIVE SPAMMER/Projects/blockchain-data-pipeline/data/warehouse/bitcoin.duckdb'
+      threads: 1

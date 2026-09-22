@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bitcoin
+    description: >
+      Tables written directly into the DuckDB warehouse by run_pipeline.py
+      (extract -> transform -> validate -> load), before dbt runs at all.
+      dbt does not build these -- run_pipeline.py must run first.
+    schema: main
+    tables:
+      - name: blocks
+      - name: transactions
+      - name: inputs
+      - name: outputs
