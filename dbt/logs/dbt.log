@@ -1517,3 +1517,646 @@ alter table "bitcoin"."main"."daily_blocks_transactions__dbt_tmp" rename to "dai
 [0m12:18:24.023111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025801120450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587FEDB150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587F774E50>]}
 [0m12:18:24.023648 [debug] [MainThread]: Flushing usage events
 [0m12:18:25.970791 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:59:00.601274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002544CC1BA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002544A838690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002544F647890>]}
+
+
+============================== 12:59:00.618570 | 19a75e03-a750-40cb-8ec6-5f6e61740f77 ==============================
+[0m12:59:00.618570 [info ] [MainThread]: Running with dbt=1.12.5
+[0m12:59:00.619541 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt', 'invocation_command': 'dbt run --project-dir dbt --profiles-dir dbt', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt\\logs'}
+[0m12:59:01.058115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002544F739BA0>]}
+[0m12:59:01.171083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002544D84B350>]}
+[0m12:59:01.197727 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m12:59:01.925715 [debug] [MainThread]: checksum: 3c6006a13333163f11613b78feabfa2c08a6bceef679b74fd236fcead48422e1, vars: {}, profile: bitcoin_pipeline, target: dev, version: 1.12.5
+[0m12:59:03.827026 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m12:59:03.827965 [debug] [MainThread]: Partial parsing: added file: bitcoin_pipeline://models\staging\_models.yml
+[0m12:59:03.828759 [debug] [MainThread]: Partial parsing: added file: bitcoin_pipeline://models\marts\daily_miner_transactions.sql
+[0m12:59:03.829447 [debug] [MainThread]: Partial parsing: added file: bitcoin_pipeline://models\staging\stg_outputs.sql
+[0m12:59:04.751669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025451212350>]}
+[0m12:59:04.888709 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m12:59:04.908099 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m12:59:04.956695 [debug] [MainThread]: Wrote artifact OsiDocument to dbt\target\osi_document.json
+[0m12:59:04.994713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254512E8500>]}
+[0m12:59:04.995319 [info ] [MainThread]: Found 5 models, 4 data tests, 4 sources, 500 macros
+[0m12:59:04.995790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254512CBD90>]}
+[0m12:59:04.998489 [info ] [MainThread]: 
+[0m12:59:04.998957 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:59:04.999473 [info ] [MainThread]: 
+[0m12:59:05.000226 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:59:05.006899 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_bitcoin'
+[0m12:59:07.863152 [debug] [ThreadPool]: Using duckdb connection "list_bitcoin"
+[0m12:59:07.863611 [debug] [ThreadPool]: On list_bitcoin: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "connection_name": "list_bitcoin"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"bitcoin"'
+    
+  
+  
+[0m12:59:07.864021 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:59:07.888663 [debug] [ThreadPool]: SQL status: OK in 0.025 seconds
+[0m12:59:07.890306 [debug] [ThreadPool]: On list_bitcoin: Close
+[0m12:59:07.891088 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_bitcoin, now create_bitcoin_main)
+[0m12:59:07.891629 [debug] [ThreadPool]: Creating schema "database: "bitcoin"
+schema: "main"
+"
+[0m12:59:07.898549 [debug] [ThreadPool]: Using duckdb connection "create_bitcoin_main"
+[0m12:59:07.898881 [debug] [ThreadPool]: On create_bitcoin_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "connection_name": "create_bitcoin_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='bitcoin'
+        and type != 'duckdb'
+    
+  
+[0m12:59:07.899179 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:59:07.901304 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m12:59:07.902436 [debug] [ThreadPool]: Using duckdb connection "create_bitcoin_main"
+[0m12:59:07.902839 [debug] [ThreadPool]: On create_bitcoin_main: BEGIN
+[0m12:59:07.903300 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:59:07.903604 [debug] [ThreadPool]: Using duckdb connection "create_bitcoin_main"
+[0m12:59:07.903917 [debug] [ThreadPool]: On create_bitcoin_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "connection_name": "create_bitcoin_main"} */
+
+    
+    
+        create schema if not exists "bitcoin"."main"
+    
+[0m12:59:07.906104 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m12:59:07.906814 [debug] [ThreadPool]: On create_bitcoin_main: COMMIT
+[0m12:59:07.907120 [debug] [ThreadPool]: Using duckdb connection "create_bitcoin_main"
+[0m12:59:07.907396 [debug] [ThreadPool]: On create_bitcoin_main: COMMIT
+[0m12:59:07.907851 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:59:07.908156 [debug] [ThreadPool]: On create_bitcoin_main: Close
+[0m12:59:07.909907 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_bitcoin_main'
+[0m12:59:07.914225 [debug] [ThreadPool]: Using duckdb connection "list_bitcoin_main"
+[0m12:59:07.914534 [debug] [ThreadPool]: On list_bitcoin_main: BEGIN
+[0m12:59:07.914808 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:59:07.915341 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:59:07.915726 [debug] [ThreadPool]: Using duckdb connection "list_bitcoin_main"
+[0m12:59:07.916321 [debug] [ThreadPool]: On list_bitcoin_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "connection_name": "list_bitcoin_main"} */
+select
+      'bitcoin' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'bitcoin'
+  
+[0m12:59:07.922356 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m12:59:07.923617 [debug] [ThreadPool]: On list_bitcoin_main: ROLLBACK
+[0m12:59:07.924356 [debug] [ThreadPool]: On list_bitcoin_main: Close
+[0m12:59:07.926111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025451536680>]}
+[0m12:59:07.926567 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:07.926861 [debug] [MainThread]: On master: BEGIN
+[0m12:59:07.927132 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:59:07.927602 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:59:07.927901 [debug] [MainThread]: On master: COMMIT
+[0m12:59:07.928179 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:07.928444 [debug] [MainThread]: On master: COMMIT
+[0m12:59:07.928879 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:59:07.929175 [debug] [MainThread]: On master: Close
+[0m12:59:07.951207 [debug] [Thread-1 (]: Began running node model.bitcoin_pipeline.stg_blocks
+[0m12:59:07.952207 [info ] [Thread-1 (]: 1 of 5 START sql view model main.stg_blocks .................................... [RUN]
+[0m12:59:07.952882 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.bitcoin_pipeline.stg_blocks'
+[0m12:59:07.953235 [debug] [Thread-1 (]: Began compiling node model.bitcoin_pipeline.stg_blocks
+[0m12:59:07.959527 [debug] [Thread-1 (]: Writing injected SQL for node "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:07.960604 [debug] [Thread-1 (]: Began executing node model.bitcoin_pipeline.stg_blocks
+[0m12:59:07.995821 [debug] [Thread-1 (]: Writing runtime sql for node "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:07.996997 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:07.997578 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: BEGIN
+[0m12:59:07.997939 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:59:07.998815 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:07.999170 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:07.999502 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_blocks"} */
+
+  
+  create view "bitcoin"."main"."stg_blocks__dbt_tmp" as (
+    SELECT
+    block_hash,
+    height,
+    to_timestamp(timestamp) as block_timestamp,
+    to_timestamp(timestamp)::date as block_date,
+    transaction_count
+FROM "bitcoin"."main"."blocks"
+  );
+
+[0m12:59:08.000390 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.005574 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:08.005953 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_blocks"} */
+alter view "bitcoin"."main"."stg_blocks" rename to "stg_blocks__dbt_backup"
+[0m12:59:08.012015 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m12:59:08.014264 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:08.014633 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_blocks"} */
+alter view "bitcoin"."main"."stg_blocks__dbt_tmp" rename to "stg_blocks"
+[0m12:59:08.015272 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.029401 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: COMMIT
+[0m12:59:08.029786 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:08.030120 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: COMMIT
+[0m12:59:08.034743 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m12:59:08.039695 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_blocks"
+[0m12:59:08.040066 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_blocks"} */
+
+      drop view if exists "bitcoin"."main"."stg_blocks__dbt_backup" cascade
+    
+[0m12:59:08.044194 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m12:59:08.047225 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_blocks: Close
+[0m12:59:08.050233 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254516CD790>]}
+[0m12:59:08.050873 [info ] [Thread-1 (]: 1 of 5 OK created sql view model main.stg_blocks ............................... [[32mOK[0m in 0.10s]
+[0m12:59:08.051758 [debug] [Thread-1 (]: Finished running node model.bitcoin_pipeline.stg_blocks
+[0m12:59:08.052241 [debug] [Thread-1 (]: Began running node model.bitcoin_pipeline.stg_outputs
+[0m12:59:08.052826 [info ] [Thread-1 (]: 2 of 5 START sql view model main.stg_outputs ................................... [RUN]
+[0m12:59:08.053482 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bitcoin_pipeline.stg_blocks, now model.bitcoin_pipeline.stg_outputs)
+[0m12:59:08.053850 [debug] [Thread-1 (]: Began compiling node model.bitcoin_pipeline.stg_outputs
+[0m12:59:08.055651 [debug] [Thread-1 (]: Writing injected SQL for node "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.057155 [debug] [Thread-1 (]: Began executing node model.bitcoin_pipeline.stg_outputs
+[0m12:59:08.062002 [debug] [Thread-1 (]: Writing runtime sql for node "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.063859 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.064454 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: BEGIN
+[0m12:59:08.064902 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:08.065585 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.065982 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.066772 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_outputs"} */
+
+  
+  create view "bitcoin"."main"."stg_outputs__dbt_tmp" as (
+    SELECT tx_hash, output_index, address, value_satoshis
+FROM "bitcoin"."main"."outputs"
+  );
+
+[0m12:59:08.067963 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.070257 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.070696 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_outputs"} */
+alter view "bitcoin"."main"."stg_outputs__dbt_tmp" rename to "stg_outputs"
+[0m12:59:08.071351 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.072652 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: COMMIT
+[0m12:59:08.073000 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.073320 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: COMMIT
+[0m12:59:08.075298 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m12:59:08.077024 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_outputs"
+[0m12:59:08.077518 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_outputs"} */
+
+      drop view if exists "bitcoin"."main"."stg_outputs__dbt_backup" cascade
+    
+[0m12:59:08.078293 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.079851 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_outputs: Close
+[0m12:59:08.080426 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025451768D60>]}
+[0m12:59:08.081012 [info ] [Thread-1 (]: 2 of 5 OK created sql view model main.stg_outputs .............................. [[32mOK[0m in 0.03s]
+[0m12:59:08.081890 [debug] [Thread-1 (]: Finished running node model.bitcoin_pipeline.stg_outputs
+[0m12:59:08.082354 [debug] [Thread-1 (]: Began running node model.bitcoin_pipeline.stg_transactions
+[0m12:59:08.082908 [info ] [Thread-1 (]: 3 of 5 START sql view model main.stg_transactions .............................. [RUN]
+[0m12:59:08.083505 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bitcoin_pipeline.stg_outputs, now model.bitcoin_pipeline.stg_transactions)
+[0m12:59:08.083861 [debug] [Thread-1 (]: Began compiling node model.bitcoin_pipeline.stg_transactions
+[0m12:59:08.085630 [debug] [Thread-1 (]: Writing injected SQL for node "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.086687 [debug] [Thread-1 (]: Began executing node model.bitcoin_pipeline.stg_transactions
+[0m12:59:08.089352 [debug] [Thread-1 (]: Writing runtime sql for node "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.090353 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.090845 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: BEGIN
+[0m12:59:08.091447 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:08.092358 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.092863 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.093378 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_transactions"} */
+
+  
+  create view "bitcoin"."main"."stg_transactions__dbt_tmp" as (
+    SELECT
+    tx_hash,
+    block_hash,
+    is_coinbase,
+    input_count,
+    output_count
+FROM "bitcoin"."main"."transactions"
+  );
+
+[0m12:59:08.094421 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.097558 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.098102 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_transactions"} */
+alter view "bitcoin"."main"."stg_transactions" rename to "stg_transactions__dbt_backup"
+[0m12:59:08.099000 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.102733 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.103123 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_transactions"} */
+alter view "bitcoin"."main"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+[0m12:59:08.103972 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.105484 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: COMMIT
+[0m12:59:08.105837 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.106165 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: COMMIT
+[0m12:59:08.107896 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.109397 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.stg_transactions"
+[0m12:59:08.109749 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.stg_transactions"} */
+
+      drop view if exists "bitcoin"."main"."stg_transactions__dbt_backup" cascade
+    
+[0m12:59:08.114149 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m12:59:08.115865 [debug] [Thread-1 (]: On model.bitcoin_pipeline.stg_transactions: Close
+[0m12:59:08.116430 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254516A2170>]}
+[0m12:59:08.117094 [info ] [Thread-1 (]: 3 of 5 OK created sql view model main.stg_transactions ......................... [[32mOK[0m in 0.03s]
+[0m12:59:08.117834 [debug] [Thread-1 (]: Finished running node model.bitcoin_pipeline.stg_transactions
+[0m12:59:08.118235 [debug] [Thread-1 (]: Began running node model.bitcoin_pipeline.daily_blocks_transactions
+[0m12:59:08.118766 [info ] [Thread-1 (]: 4 of 5 START sql table model main.daily_blocks_transactions .................... [RUN]
+[0m12:59:08.119416 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bitcoin_pipeline.stg_transactions, now model.bitcoin_pipeline.daily_blocks_transactions)
+[0m12:59:08.119774 [debug] [Thread-1 (]: Began compiling node model.bitcoin_pipeline.daily_blocks_transactions
+[0m12:59:08.121520 [debug] [Thread-1 (]: Writing injected SQL for node "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.122662 [debug] [Thread-1 (]: Began executing node model.bitcoin_pipeline.daily_blocks_transactions
+[0m12:59:08.165741 [debug] [Thread-1 (]: Writing runtime sql for node "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.167029 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.167430 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: BEGIN
+[0m12:59:08.167780 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:08.168478 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.168834 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.169179 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_blocks_transactions"} */
+
+    
+
+    create  table
+      "bitcoin"."main"."daily_blocks_transactions__dbt_tmp"
+  
+    
+    as (
+      SELECT
+    block_date,
+    count(*) as block_count,
+    sum(transaction_count) as total_transactions
+FROM "bitcoin"."main"."stg_blocks"
+GROUP BY block_date
+ORDER BY block_date
+    );
+    
+  
+[0m12:59:08.180448 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m12:59:08.185174 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.185549 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_blocks_transactions"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'bitcoin'
+      AND schema_name = 'main'
+      AND table_name = 'daily_blocks_transactions'
+  
+[0m12:59:08.186394 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.188449 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.188806 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_blocks_transactions"} */
+alter table "bitcoin"."main"."daily_blocks_transactions" rename to "daily_blocks_transactions__dbt_backup"
+[0m12:59:08.189560 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.191277 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.191799 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_blocks_transactions"} */
+alter table "bitcoin"."main"."daily_blocks_transactions__dbt_tmp" rename to "daily_blocks_transactions"
+[0m12:59:08.192695 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.197538 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: COMMIT
+[0m12:59:08.197905 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.198235 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: COMMIT
+[0m12:59:08.200068 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.201524 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_blocks_transactions"
+[0m12:59:08.201875 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_blocks_transactions"} */
+
+      drop table if exists "bitcoin"."main"."daily_blocks_transactions__dbt_backup" cascade
+    
+[0m12:59:08.203505 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.204660 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_blocks_transactions: Close
+[0m12:59:08.205192 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000254515FF2D0>]}
+[0m12:59:08.205808 [info ] [Thread-1 (]: 4 of 5 OK created sql table model main.daily_blocks_transactions ............... [[32mOK[0m in 0.09s]
+[0m12:59:08.206503 [debug] [Thread-1 (]: Finished running node model.bitcoin_pipeline.daily_blocks_transactions
+[0m12:59:08.206901 [debug] [Thread-1 (]: Began running node model.bitcoin_pipeline.daily_miner_transactions
+[0m12:59:08.207456 [info ] [Thread-1 (]: 5 of 5 START sql table model main.daily_miner_transactions ..................... [RUN]
+[0m12:59:08.208117 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.bitcoin_pipeline.daily_blocks_transactions, now model.bitcoin_pipeline.daily_miner_transactions)
+[0m12:59:08.208579 [debug] [Thread-1 (]: Began compiling node model.bitcoin_pipeline.daily_miner_transactions
+[0m12:59:08.210760 [debug] [Thread-1 (]: Writing injected SQL for node "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.211893 [debug] [Thread-1 (]: Began executing node model.bitcoin_pipeline.daily_miner_transactions
+[0m12:59:08.214642 [debug] [Thread-1 (]: Writing runtime sql for node "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.215891 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.216633 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: BEGIN
+[0m12:59:08.217125 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:08.217829 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:08.218295 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.218849 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_miner_transactions"} */
+
+    
+
+    create  table
+      "bitcoin"."main"."daily_miner_transactions__dbt_tmp"
+  
+    
+    as (
+      SELECT b.height, ROUND(SUM(o.value_satoshis) / 1e8, 4) AS miner_revenue_btc
+FROM "bitcoin"."main"."stg_transactions" AS t
+JOIN "bitcoin"."main"."stg_outputs" AS o ON t.tx_hash = o.tx_hash
+JOIN "bitcoin"."main"."stg_blocks" AS b ON t.block_hash = b.block_hash
+WHERE t.is_coinbase = TRUE
+GROUP BY b.height
+ORdeR BY b.height
+    );
+    
+  
+[0m12:59:08.224404 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m12:59:08.228110 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.228690 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_miner_transactions"} */
+alter table "bitcoin"."main"."daily_miner_transactions__dbt_tmp" rename to "daily_miner_transactions"
+[0m12:59:08.229585 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.231090 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: COMMIT
+[0m12:59:08.231440 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.231769 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: COMMIT
+[0m12:59:08.233872 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m12:59:08.235339 [debug] [Thread-1 (]: Using duckdb connection "model.bitcoin_pipeline.daily_miner_transactions"
+[0m12:59:08.235690 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "model.bitcoin_pipeline.daily_miner_transactions"} */
+
+      drop table if exists "bitcoin"."main"."daily_miner_transactions__dbt_backup" cascade
+    
+[0m12:59:08.236298 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:59:08.237441 [debug] [Thread-1 (]: On model.bitcoin_pipeline.daily_miner_transactions: Close
+[0m12:59:08.237963 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '19a75e03-a750-40cb-8ec6-5f6e61740f77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025451162E40>]}
+[0m12:59:08.238541 [info ] [Thread-1 (]: 5 of 5 OK created sql table model main.daily_miner_transactions ................ [[32mOK[0m in 0.03s]
+[0m12:59:08.239279 [debug] [Thread-1 (]: Finished running node model.bitcoin_pipeline.daily_miner_transactions
+[0m12:59:08.240599 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:08.240918 [debug] [MainThread]: On master: BEGIN
+[0m12:59:08.241205 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:59:08.241723 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:59:08.242022 [debug] [MainThread]: On master: COMMIT
+[0m12:59:08.242297 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:08.242559 [debug] [MainThread]: On master: COMMIT
+[0m12:59:08.243048 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:59:08.243495 [debug] [MainThread]: On master: Close
+[0m12:59:08.244010 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:59:08.244355 [debug] [MainThread]: Connection 'create_bitcoin_main' was properly closed.
+[0m12:59:08.244627 [debug] [MainThread]: Connection 'list_bitcoin_main' was properly closed.
+[0m12:59:08.244871 [debug] [MainThread]: Connection 'model.bitcoin_pipeline.daily_miner_transactions' was properly closed.
+[0m12:59:08.245215 [info ] [MainThread]: 
+[0m12:59:08.245680 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 3.25 seconds (3.25s).
+[0m12:59:08.247809 [debug] [MainThread]: Command end result
+[0m12:59:08.284910 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m12:59:08.288618 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m12:59:08.292237 [debug] [MainThread]: Wrote artifact OsiDocument to dbt\target\osi_document.json
+[0m12:59:08.299754 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt\target\run_results.json
+[0m12:59:08.300098 [info ] [MainThread]: 
+[0m12:59:08.300608 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:59:08.301137 [info ] [MainThread]: 
+[0m12:59:08.301704 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m12:59:08.302735 [debug] [MainThread]: Command `dbt run` succeeded at 12:59:08.302620 after 7.95 seconds
+[0m12:59:08.303108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025451195370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002544D9D27B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025451688230>]}
+[0m12:59:08.303469 [debug] [MainThread]: Flushing usage events
+[0m12:59:10.877191 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:59:19.451637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CF949FA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CF7098690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFBEC7890>]}
+
+
+============================== 12:59:19.464284 | f068c9d8-070a-4104-af07-3dacf03fc8ae ==============================
+[0m12:59:19.464284 [info ] [MainThread]: Running with dbt=1.12.5
+[0m12:59:19.465157 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test --project-dir dbt --profiles-dir dbt', 'log_path': 'dbt\\logs'}
+[0m12:59:19.813523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f068c9d8-070a-4104-af07-3dacf03fc8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFBFB9BA0>]}
+[0m12:59:19.908398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f068c9d8-070a-4104-af07-3dacf03fc8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFA0CB350>]}
+[0m12:59:19.913051 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m12:59:20.384865 [debug] [MainThread]: checksum: 3c6006a13333163f11613b78feabfa2c08a6bceef679b74fd236fcead48422e1, vars: {}, profile: bitcoin_pipeline, target: dev, version: 1.12.5
+[0m12:59:20.647277 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:59:20.647806 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:59:20.648179 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:59:20.662641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f068c9d8-070a-4104-af07-3dacf03fc8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFC44BB50>]}
+[0m12:59:20.866900 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m12:59:20.874192 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m12:59:20.917406 [debug] [MainThread]: Wrote artifact OsiDocument to dbt\target\osi_document.json
+[0m12:59:20.970630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f068c9d8-070a-4104-af07-3dacf03fc8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFC7235C0>]}
+[0m12:59:20.971526 [info ] [MainThread]: Found 5 models, 4 data tests, 4 sources, 500 macros
+[0m12:59:20.972401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f068c9d8-070a-4104-af07-3dacf03fc8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFC7B3BD0>]}
+[0m12:59:20.975778 [info ] [MainThread]: 
+[0m12:59:20.976470 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:59:20.977051 [info ] [MainThread]: 
+[0m12:59:20.978017 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:59:20.985979 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_bitcoin_main'
+[0m12:59:21.105806 [debug] [ThreadPool]: Using duckdb connection "list_bitcoin_main"
+[0m12:59:21.106584 [debug] [ThreadPool]: On list_bitcoin_main: BEGIN
+[0m12:59:21.107325 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:59:21.143586 [debug] [ThreadPool]: SQL status: OK in 0.036 seconds
+[0m12:59:21.144194 [debug] [ThreadPool]: Using duckdb connection "list_bitcoin_main"
+[0m12:59:21.144643 [debug] [ThreadPool]: On list_bitcoin_main: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "connection_name": "list_bitcoin_main"} */
+select
+      'bitcoin' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'bitcoin'
+  
+[0m12:59:21.151054 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m12:59:21.153020 [debug] [ThreadPool]: On list_bitcoin_main: ROLLBACK
+[0m12:59:21.153854 [debug] [ThreadPool]: On list_bitcoin_main: Close
+[0m12:59:21.157431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f068c9d8-070a-4104-af07-3dacf03fc8ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFCBC86D0>]}
+[0m12:59:21.158242 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:21.158774 [debug] [MainThread]: On master: BEGIN
+[0m12:59:21.159258 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:59:21.160109 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m12:59:21.160660 [debug] [MainThread]: On master: COMMIT
+[0m12:59:21.161297 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:21.161910 [debug] [MainThread]: On master: COMMIT
+[0m12:59:21.162683 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:59:21.163309 [debug] [MainThread]: On master: Close
+[0m12:59:21.171389 [debug] [Thread-1 (]: Began running node test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60
+[0m12:59:21.172168 [info ] [Thread-1 (]: 1 of 4 START test not_null_stg_blocks_block_hash ............................... [RUN]
+[0m12:59:21.173248 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60'
+[0m12:59:21.173845 [debug] [Thread-1 (]: Began compiling node test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60
+[0m12:59:21.200801 [debug] [Thread-1 (]: Writing injected SQL for node "test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60"
+[0m12:59:21.206323 [debug] [Thread-1 (]: Began executing node test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60
+[0m12:59:21.234089 [debug] [Thread-1 (]: Writing runtime sql for node "test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60"
+[0m12:59:21.236741 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60"
+[0m12:59:21.237325 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60: BEGIN
+[0m12:59:21.237868 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:59:21.239135 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:21.239632 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60"
+[0m12:59:21.240121 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select block_hash
+from "bitcoin"."main"."stg_blocks"
+where block_hash is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:59:21.263487 [debug] [Thread-1 (]: SQL status: OK in 0.023 seconds
+[0m12:59:21.269950 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60: ROLLBACK
+[0m12:59:21.270908 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60: Close
+[0m12:59:21.272058 [info ] [Thread-1 (]: 1 of 4 PASS not_null_stg_blocks_block_hash ..................................... [[32mPASS[0m in 0.10s]
+[0m12:59:21.273421 [debug] [Thread-1 (]: Finished running node test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60
+[0m12:59:21.274095 [debug] [Thread-1 (]: Began running node test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782
+[0m12:59:21.274826 [info ] [Thread-1 (]: 2 of 4 START test not_null_stg_transactions_tx_hash ............................ [RUN]
+[0m12:59:21.275773 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.bitcoin_pipeline.not_null_stg_blocks_block_hash.e3e0bada60, now test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782)
+[0m12:59:21.276448 [debug] [Thread-1 (]: Began compiling node test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782
+[0m12:59:21.287359 [debug] [Thread-1 (]: Writing injected SQL for node "test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782"
+[0m12:59:21.289018 [debug] [Thread-1 (]: Began executing node test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782
+[0m12:59:21.292325 [debug] [Thread-1 (]: Writing runtime sql for node "test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782"
+[0m12:59:21.294260 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782"
+[0m12:59:21.295095 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782: BEGIN
+[0m12:59:21.295712 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:21.296751 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:21.297362 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782"
+[0m12:59:21.298417 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tx_hash
+from "bitcoin"."main"."stg_transactions"
+where tx_hash is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:59:21.300457 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:21.302737 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782: ROLLBACK
+[0m12:59:21.303673 [debug] [Thread-1 (]: On test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782: Close
+[0m12:59:21.304689 [info ] [Thread-1 (]: 2 of 4 PASS not_null_stg_transactions_tx_hash .................................. [[32mPASS[0m in 0.03s]
+[0m12:59:21.305976 [debug] [Thread-1 (]: Finished running node test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782
+[0m12:59:21.306734 [debug] [Thread-1 (]: Began running node test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46
+[0m12:59:21.307485 [info ] [Thread-1 (]: 3 of 4 START test unique_stg_blocks_block_hash ................................. [RUN]
+[0m12:59:21.308327 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.bitcoin_pipeline.not_null_stg_transactions_tx_hash.0fda454782, now test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46)
+[0m12:59:21.309010 [debug] [Thread-1 (]: Began compiling node test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46
+[0m12:59:21.325115 [debug] [Thread-1 (]: Writing injected SQL for node "test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46"
+[0m12:59:21.327264 [debug] [Thread-1 (]: Began executing node test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46
+[0m12:59:21.330209 [debug] [Thread-1 (]: Writing runtime sql for node "test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46"
+[0m12:59:21.331929 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46"
+[0m12:59:21.332659 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46: BEGIN
+[0m12:59:21.333192 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:21.334234 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:21.334894 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46"
+[0m12:59:21.335483 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    block_hash as unique_field,
+    count(*) as n_records
+
+from "bitcoin"."main"."stg_blocks"
+where block_hash is not null
+group by block_hash
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:59:21.340918 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m12:59:21.343214 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46: ROLLBACK
+[0m12:59:21.344118 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46: Close
+[0m12:59:21.345785 [info ] [Thread-1 (]: 3 of 4 PASS unique_stg_blocks_block_hash ....................................... [[32mPASS[0m in 0.04s]
+[0m12:59:21.347608 [debug] [Thread-1 (]: Finished running node test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46
+[0m12:59:21.348316 [debug] [Thread-1 (]: Began running node test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675
+[0m12:59:21.348899 [info ] [Thread-1 (]: 4 of 4 START test unique_stg_transactions_tx_hash .............................. [RUN]
+[0m12:59:21.349825 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.bitcoin_pipeline.unique_stg_blocks_block_hash.2cf0457f46, now test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675)
+[0m12:59:21.350520 [debug] [Thread-1 (]: Began compiling node test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675
+[0m12:59:21.360867 [debug] [Thread-1 (]: Writing injected SQL for node "test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675"
+[0m12:59:21.362526 [debug] [Thread-1 (]: Began executing node test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675
+[0m12:59:21.365359 [debug] [Thread-1 (]: Writing runtime sql for node "test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675"
+[0m12:59:21.367098 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675"
+[0m12:59:21.367658 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675: BEGIN
+[0m12:59:21.368144 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:59:21.369107 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:59:21.369661 [debug] [Thread-1 (]: Using duckdb connection "test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675"
+[0m12:59:21.370290 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "bitcoin_pipeline", "target_name": "dev", "node_id": "test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    tx_hash as unique_field,
+    count(*) as n_records
+
+from "bitcoin"."main"."stg_transactions"
+where tx_hash is not null
+group by tx_hash
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:59:21.375817 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m12:59:21.378788 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675: ROLLBACK
+[0m12:59:21.380218 [debug] [Thread-1 (]: On test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675: Close
+[0m12:59:21.381504 [info ] [Thread-1 (]: 4 of 4 PASS unique_stg_transactions_tx_hash .................................... [[32mPASS[0m in 0.03s]
+[0m12:59:21.382923 [debug] [Thread-1 (]: Finished running node test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675
+[0m12:59:21.385007 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:21.385499 [debug] [MainThread]: On master: BEGIN
+[0m12:59:21.385917 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:59:21.386778 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m12:59:21.387252 [debug] [MainThread]: On master: COMMIT
+[0m12:59:21.387848 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:59:21.388252 [debug] [MainThread]: On master: COMMIT
+[0m12:59:21.389048 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:59:21.389924 [debug] [MainThread]: On master: Close
+[0m12:59:21.390819 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:59:21.391450 [debug] [MainThread]: Connection 'list_bitcoin_main' was properly closed.
+[0m12:59:21.392034 [debug] [MainThread]: Connection 'test.bitcoin_pipeline.unique_stg_transactions_tx_hash.7987cbe675' was properly closed.
+[0m12:59:21.392744 [info ] [MainThread]: 
+[0m12:59:21.393575 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 0.41 seconds (0.41s).
+[0m12:59:21.395981 [debug] [MainThread]: Command end result
+[0m12:59:21.460271 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m12:59:21.466671 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m12:59:21.473133 [debug] [MainThread]: Wrote artifact OsiDocument to dbt\target\osi_document.json
+[0m12:59:21.487780 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt\target\run_results.json
+[0m12:59:21.488509 [info ] [MainThread]: 
+[0m12:59:21.489468 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:59:21.490215 [info ] [MainThread]: 
+[0m12:59:21.490937 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m12:59:21.492369 [debug] [MainThread]: Command `dbt test` succeeded at 12:59:21.492199 after 2.23 seconds
+[0m12:59:21.492885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFCA71850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CF9A11650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CFCB8C680>]}
+[0m12:59:21.493529 [debug] [MainThread]: Flushing usage events
+[0m12:59:23.675424 [debug] [MainThread]: An error was encountered while trying to flush usage events

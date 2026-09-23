@@ -54,7 +54,7 @@ logic is proven. All tools below are free at this scale.
   on top of `stg_blocks`. Run with:
   `python run_pipeline.py && dbt run --project-dir dbt --profiles-dir dbt`.
 
-- [ ] **Day 6 — One more mart model + basic dbt tests**
+- [x] **Day 6 — One more mart model + basic dbt tests**
   Add `daily_miner_metrics` or `address_activity`. Add `not_null`/`unique`
   dbt tests on primary keys (tx_hash, block_hash).
 
